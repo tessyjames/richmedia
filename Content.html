@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>View</title>
+<link href="fonts.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+<div class="header"><h3 class="heading"><b>Content Provider!</b></h3></div>
+	<div class="wrapper">
+
+
+		<div class="forms">
+		<form>
+					<div style="float:left; margin-right:20px" >
+						<label id="text">Topic:</label><br>
+						<input id="topic" type="text" name="text" placeholder="Topic" class="topic_text">
+						<div style="width:100%">
+						   <label id="text">Text:</label><br>
+						<textarea id="textarea" type="text" placeholder="Write you text here" class="form_text" cols="80" rows="20">
+						</textarea>
+					</div>
+				</div>
+				<br>
+				<div style="float:left;width:100%">
+					<br><br>
+					<br><label id="Image">Image:</label><br>
+					<input id="imagevalue" type="file" name="imageurl" placeholder="Image" onchange="document.getElementById('previmage').src = window.URL.createObjectURL(this.files[0])" accept= "image/*" class="image_url custom-file-input">
+					<!-- <img id="blah" alt="Image" width="30%" height="25%"  /> -->
+
+
+					<br>	
+				</div>
+
+				<div style="float:left;width:100%" >
+					<label id="video">Video:</label><br>
+					<input id="videovalue" type="file" name="videourl" placeholder="Video" onchange="document.getElementById('prevvideo').src = window.URL.createObjectURL(this.files[0])" accept= "video/*" class="video_url custom-file-input">
+					<!-- <iframe id="bla" alt="Video" width="33%" height="45%"></iframe> -->
+					<br>	
+				</div>
+
+				<div style="float:left; width:100%" >
+					<label id="audio">Audio:</label><br>
+					<input id="audiovalue" type="file" name="audiourl" placeholder="Audio" onchange="document.getElementById('prevaudio').src = window.URL.createObjectURL(this.files[0])" accept= "audio/*" class="audio_url custom-file-input">
+					<!-- <iframe id="bl" alt="Audio" width="33%" height="45%"></iframe> -->
+					<br>	
+				</div>
+				<div style="float:left; width:100%">
+					<label id="done">Done? </label><br>
+					<label id="previewbutton" class="submit_button" style=" margin-left: -20px; text-align:center" onclick="passing();">Preview</label>
+
+					<input type="submit" name="submit" value="Upload" class="submit_button" style=" margin-left: 30px;">
+				</div>
+				
+			</form>
+		</div>
+
+
+
+
+
+
+	</div>
+
+        <div class="content" id="con">
+		    <div class="container">
+                     <span id="close">X</span>
+					<img id="previmage" alt="No Image" width="100%" height="300px" style="margin-left:auto;margin-right:auto">
+					    <div class="textdiv">
+					       <div class="textcontainer" >
+					      		<h2 id="prevtopic" placeholder="No Text"></h2>
+								<div id="textbox" placeholder="No Text"></div>
+							</div>
+						</div>
+					<iframe id="prevvideo" width="100%" height="300px" style="margin-bottom:30px; margin-left:auto;margin-right:auto" alt="No Audio"></iframe>
+						<iframe id="prevaudio" width="100%" height="50px" style="margin-left:auto;margin-right:auto" alt="No Audio"></iframe>
+
+						
+			</div>
+		</div>
+
+<!-- <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js">
+	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+</script> 
+<script type="text/javascript">
+	                       //<![CDATA[
+	                    
+	                        //]]>
+	                   </script> -->
+
+<script type="text/javascript">
+
+function passing() 
+	{
+		savePage();
+		modal();
+		loadPage();
+	}
+function savePage()
+	 {
+	 	
+	    var topic = document.getElementById('topic').value;
+		localStorage.setItem("topicvalue", topic);
+		var text = document.getElementById('textarea').value;
+		localStorage.setItem("textvalue", text);
+	}
+	
+
+function modal()
+	{
+		var mode=document.getElementById('con');	
+		var button=document.getElementById("previewbutton");
+		button.onclick=function()
+		{
+		mode.style.display="block";
+		}
+		var closebtn = document.getElementById("close");
+        closebtn.onclick = function () 
+        {
+        mode.style.display = "none";
+
+        }
+        window.onclick = function (event)
+         {
+	        if (event.target == mode) 
+	        {
+	            mode.style.display = "none";
+	        }
+        }
+	}
+
+
+function loadPage()
+	{
+		document.getElementById("prevtopic").innerHTML=localStorage.getItem('topicvalue');
+		document.getElementById("textbox").innerHTML=localStorage.getItem('textvalue');
+	}
+		/*ar imgS=document.getElementById("Image");
+	imgS.onclick=function(){
+		alert("working");*/
+	
+</script>
+
+
+</body>
+</html> 

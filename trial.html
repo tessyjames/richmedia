@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RichMedia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="header">
+   <div>
+	<ul class="heading menu_list" >
+	    <li style="float:left;margin-left:-20px"><div class="title" >Content Provider!</div></li>
+	    <li style="float:left;margin-left:630px"><div class="contnt" onclick="home()">Home</div></li>
+		<li style="float:left;"><div class="contnt" onclick="viewcontent()">Contents</div></li>
+		<li style="float:left; "><div class="logout" onclick="login()">Log Out</div></li>
+	</ul>
+   </div>
+</div>
+<div class="_body">
+<div class="div_content">
+
+	
+<div class="fill_in">
+   <div class="forms">
+		<form>
+		   <div style="float:left;width:100%">
+					<br><br>
+					<br><label id="Image">Image:</label>
+					<input id="imagevalue" type="file" name="imageurl" placeholder="Image" 
+					 accept= "image/*" class="image_url custom-file-input1">
+					<!-- <img id="blah" alt="Image" width="30%" height="25%"  /> -->
+
+
+					<br>	
+				</div>
+					<div style="float:left; margin-right:20px" >
+						<label id="text">Topic:</label><br>
+						<input id="topic" type="text" name="text" placeholder="Topic" class="topic_text" onkeyup="getText()">
+						<div style="width:100%">
+						   <label id="text">Text:</label><br>
+						<textarea id="textarea" type="text" placeholder="Write you text here" class="form_text" style="width:400px" onkeyup="getText()">
+						</textarea>
+					</div>
+				</div>
+
+				<br>
+				
+				<div style="float:left;width:100%" >
+					<label id="video">Video:</label>
+					<input id="videovalue" type="file" name="videourl" placeholder="Video" onchange="document.getElementById('prevvideo').src = window.URL.createObjectURL(this.files[0])" accept= "video/*" class="video_url custom-file-input1">
+					<!-- <iframe id="bla" alt="Video" width="33%" height="45%"></iframe> -->
+					<br>	
+				</div>
+
+				<div style="float:left; width:100%" >
+					<label id="audio">Audio:</label>
+					<input id="audiovalue" type="file" name="audiourl" placeholder="Audio" onchange="document.getElementById('prevaudio').src = window.URL.createObjectURL(this.files[0])" accept= "audio/*" class="audio_url custom-file-input1">
+					<!-- <iframe id="bl" alt="Audio" width="33%" height="45%"></iframe> -->
+					<br>	
+				</div>
+
+				<div style="float:left; width:100%">
+					<label id="done">Done? </label><br>
+					<input type="submit" name="submit" value="Save" class="submit_button" style="margin-left: 30px;text-align:center;">
+					<input type="submit" name="submit" value="Publish" class="submit_button" style="margin-left: 30px;text-align:center;">
+				</div>
+
+	     </form>
+</div>
+</div>
+
+<div class="backgroundcolors">
+
+	    <div style="float:left; width:50% border-right:1px">
+			<div class="col softred" onclick="softredbackground()"></div>
+			<div class="col POMEGRANATE" onclick="POMEGRANATEbackground()"></div>
+			<div class="col FLAMINGO" onclick="FLAMINGObackground()"></div>
+			<div class="col RAZZMATAZZ" onclick="RAZZMATAZZbackground()"></div>
+			<div class="col CABARET" onclick="CABARETbackground()"></div>
+			<div class="col RADICAL" onclick="RADICALbackground() "></div>
+			<div class="col SNUFF" onclick="SNUFFbackground()"></div>
+			<div class="col REBECCAPURPL" onclick="REBECCAPURPLbackground()"></div>
+			<div class="col WISTFUL" onclick=" WISTFULbackground()"></div>
+			<div class="col SEANCE" onclick=" SEANCEbackground()"></div>
+			<div class="col MEDIUM" onclick="MEDIUMbackground()"></div>
+			<div class="col ALICE " onclick="ALICEbackground()"></div>
+			<div class="col ROYAL " onclick="ROYALbackground()"></div>
+			<div class="col HUMMING " onclick="HUMMINGbackground()"></div>
+			<div class="col MADISON" onclick="MADISONbackground()"></div>
+			<div class="col TURQUOISE" onclick="TURQUOISEbackground()"></div>
+			<div class="col JADE" onclick="JADEbackground()"></div>
+			<div class="col MADANG" onclick="MADANGbackground()"></div>
+			<div class="col CREAM " onclick="CREAMbackground()"></div>
+			<div class="col SAFFRON" onclick="SAFFRONbackground()"></div>
+			<div class="col CAPE" onclick="CAPEbackground()"></div>
+			<div class="col CASABLANCA" onclick="CASABLANCAbackground()"></div>
+			<div class="col BUCKTHORN" onclick="BUCKTHORNbackground()"></div>
+			<div class="col ECSTASY" onclick="ECSTASYbackground()"></div>
+			<div class="col PORCELAIN" onclick="PORCELAINbackground()"></div>
+			<div class="col SILVER" onclick="SILVERbackground() "></div>
+			<div class="col CASCADE" onclick="CASCADEbackground()"></div>
+			
+			
+		</div>
+<script type="text/javascript" src="javasriptfile.js"></script>
+</div>
+
+<div class="preview_part" id="pageback">
+
+<div class="content1" id="con">
+		    <div class="container1">
+                    
+					<div id="previmage" alt="No Image" style="margin-left:auto;margin-right:auto"></div>
+					    <div class="textdiv1">
+					       <div class="textcontainer" >
+					      		<h2 id="prevtopic" placeholder="No Text"></h2>
+								<div id="textbox" placeholder="No Text"></div>
+							</div>
+						</div>
+					<video id="prevvideo" width="100%" height="300px" style="margin-bottom:30px; margin-left:auto;margin-right:auto" alt="No Audio" controls>
+						<source  type="video/mp4">
+					</video>
+						<audio id="prevaudio"  style="margin-left:auto;margin-right:auto" alt="No Audio" controls>
+							<source  type="audio/mpeg">
+						</audio>
+
+						
+			</div>
+		</div>
+		<br>
+	<label id="previewbutton" class="submit_button" style=" text-align:center;margin-top:70px" onclick="passing();">Preview on New Page</label>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+	 	function getText() {
+	 		// body...
+	 	
+	    var topic = document.getElementById('topic').value;
+		localStorage.setItem("topicvalue", topic);
+		var text = document.getElementById('textarea').value;
+		localStorage.setItem("textvalue", text);
+		document.getElementById("prevtopic").innerHTML=localStorage.getItem('topicvalue');
+		document.getElementById("textbox").innerHTML=localStorage.getItem('textvalue');
+	}
+		/*ar imgS=document.getElementById("Image");
+	imgS.onclick=function(){
+		alert("working");*/
+	
+</script>
+
+
+
+
+</body>
+</html>
