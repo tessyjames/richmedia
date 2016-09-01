@@ -5,8 +5,12 @@ function viewcontent() {
 	location.href="viewcontent.html";
 	}
 	function home() {
-		location.href="trial.html";
+		location.href="homepage.html";
 		}
+function logged() {
+  // body...
+  location.href="homepage.html";
+}
 
 
 function POMEGRANATEbackground() {
@@ -145,4 +149,64 @@ function readURL(){
       reader.readAsDataURL(file);
     }else{
     }
+}
+
+function savetable()
+{
+    var sn=1;
+    var d = new Date();
+    var table=document.getElementById("mytable");
+    if(table.isEmpty)
+    {
+      var tops=localStorage.getItem('topicvalue');
+      var row=table.insertRow(1);
+      var cell1=row.insertCell(0);
+      var cell2=row.insertCell(1);
+      var cell3=row.insertCell(2);
+      var cell4=row.insertCell(3);
+      cell1.innerHTML=sn+=1;
+      
+      cell2.innerHTML=tops;
+      cell3.innerHTML=d.toDateString();
+      cell4.innerHTML="Saved";
+    }
+    else{
+      var n=1;
+      var tops=localStorage.getItem('topicvalue');
+      var row=table.insertRow(n+1);
+      var cell1=row.insertCell(0);
+      var cell2=row.insertCell(1);
+      var cell3=row.insertCell(2);
+     
+      var cell4=row.insertCell(3);
+       n++;
+      cell1.innerHTML=sn+=1;
+      
+      cell2.innerHTML=tops;
+      cell3.innerHTML=d.toDateString();
+      cell4.innerHTML="Saved";
+      
+    }
+}
+
+
+
+function publishtable() {
+var d = new Date();
+var tops=localStorage.getItem('topicvalue');
+var table=document.getElementById("mytable");
+var row=table.insertRow(0);
+var cell1=row.insertCell(0);
+var cell2=row.insertCell(1);
+var cell3=row.insertCell(2);
+cell1.innerHTML=tops;
+cell2.innerHTML=d.toDateString();
+cell3.innerHTML="Saved";  
+}
+
+
+function saveinfo(event) {
+event.preventDefault();
+var topic = document.getElementById('topic').value;
+localStorage.setItem("topicvalue", topic);
 }

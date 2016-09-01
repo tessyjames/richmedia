@@ -3,18 +3,47 @@
 <head>
 	<title>Contents</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="tabledesign.css">
+
 </head>
-<body>
 <div class="header">
    <div>
 	<ul class="heading menu_list" >
-	    <li style="float:left;"><div class="title" >Content Provider!</div></li>
-	    <li style="float:left;margin-left:527px"><div class="contnt" onclick="home()">Home</div></li>
-		<li style="float:left;"><div class="contnt" onclick="viewcontent()">Contents</div></li>
-		<li style="float:right;left: 10px; "><div class="logout" onclick="login()">Log Out</div></li>
+	    <li style="float:left;margin-left:-4%"><div class="title" >Content Provider!</div></li>
+
+	    <li style="float:right; "><div class="logout" onclick="login()">Log Out</div></li>
+	    <li style="float:right;"><div class="contnt" onclick="viewcontent()">Contents</div></li>
+	    <li style="float:right;"><div class="contnt" onclick="home()">Home</div></li>
+		
+		
 	</ul>
    </div>
 </div>
+<body onload="savetable()">
+
+
+<div class="view_content" style="width:100%">
+<div style="float:left">
+<div style="margin-top:10px;">
+<table id="mytable" >
+    <tr>
+     <th>S/N</th>
+	<th>Title</th>
+	<th>Date Created</th>
+	<th>Status</th>
+	</tr>
+	<tr>
+	    <td>1</td>
+		<td>Health is Good</td>
+		<td>1/09/2016</td>
+		<td>Saved</td>
+	</tr>
+</table>
+</div>
+</div>
+</div>
+
+
 <script type="text/javascript" src="javasriptfile.js"></script>
 </body>
 </html>

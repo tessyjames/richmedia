@@ -2,20 +2,21 @@ body{
 		font-family: 'Nunito', sans-serif;
 		background-color: #e9ebee;
 	font-size: 20px;
-	margin-top: 100px;
+	margin-top: 50px;
 	 
 }
+
 .div_content{
     background-color: #e9ebee;
 	max-width:965px;
 	margin-left: auto;
 	margin-right: auto;
-padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 .fill_in{
 	max-width:469px;
 	float:left;
-	margin-top: 100px;
+
 	
 }
 .preview_part{
@@ -147,15 +148,15 @@ background-color: #EC644B;
 	width: 96%;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 100px;	
+	
 }
-.header{
-	width: 100%;
+.header,._header{
+	max-width:100%;
 	height: 46px;
 	background-color: #3b5998;
 	color: white;
 	position: fixed;
-	margin-top: -100px;
+	margin-top: -50px;
 	z-index: 1;
 	left: 0px;
 	right: 0px;
@@ -163,8 +164,13 @@ background-color: #EC644B;
 	padding-bottom: 10px;
      font-size: 20px;
 	font-family:sans-serif;
-	position: absolute;
+	position: cover;
 
+
+}
+._header{
+	margin-top: -100px;
+	padding-top: 10px;
 }
 .logout,.title,.contnt{
 width:70px;
@@ -188,12 +194,17 @@ cursor:pointer;
 	font-family:sans-serif;
 	
 }
+
+
+.Home_list{
+	float:right;
+
+	}
 .menu_list{
 	
 	list-style-type: none;
 	margin-top: 0px;
-	position: absolute;
-
+	padding-bottom: 10px;
 }
 .forms{
 	width: 100%;
@@ -213,7 +224,9 @@ cursor:pointer;
 	color: black;
 	margin-left: 10px;
 	height: auto;
-	width: 94%;
+	min-width:300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
 }
 .form_text{
@@ -228,10 +241,11 @@ cursor:pointer;
 	color: black;
 	margin-left: 10px;
 	margin-bottom: 20px;
+	margin-top:10px; 
 }
 .image_url,.video_url,.audio_url{
 	border-bottom: 1px solid grey;
-	width: 75%;
+	width: 65%;
 	padding: 20px;
 	vertical-align: center;
 	margin-bottom: 20px;
@@ -398,9 +412,9 @@ input[type='file']{
 	border:1px solid white;
 	border-radius: 8px;
 	
-	width:40%;
+	max-width:450px;
 	padding: 10px;
-	margin-top: 15%;
+	margin-top: 100px;
 	padding-bottom: 20px;
 	
 }
