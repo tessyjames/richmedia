@@ -2,27 +2,30 @@ body{
 		font-family: 'Nunito', sans-serif;
 		background-color: #e9ebee;
 	font-size: 20px;
+	margin-top: 100px;
+	 
 }
 .div_content{
     background-color: #e9ebee;
-	width:965px;
+	max-width:965px;
 	margin-left: auto;
 	margin-right: auto;
 padding-bottom: 30px;
 }
 .fill_in{
-	width:469px;
+	max-width:469px;
 	float:left;
 	margin-top: 100px;
 	
 }
 .preview_part{
-	width:450px;
-	float:right;
+	max-width:450px;
+	float:left;
 	padding: 10px;
 	margin-top: 10px;
 	border:1px solid #e9ebee;
 	background-color:white;
+	margin-right: 10px;
 	
 }
 ._body{
@@ -150,7 +153,7 @@ background-color: #EC644B;
 	background-color: #3b5998;
 	color: white;
 	position: fixed;
-	top: 0px;
+	margin-top: -100px;
 	z-index: 1;
 	left: 0px;
 	right: 0px;
@@ -158,6 +161,7 @@ background-color: #EC644B;
 	padding-bottom: 10px;
      font-size: 20px;
 	font-family:sans-serif;
+	position: absolute;
 
 }
 .logout,.title,.contnt{
@@ -183,9 +187,10 @@ cursor:pointer;
 	
 }
 .menu_list{
-	float:left;
+	float:right;
 	list-style-type: none;
 	margin-top: 0px;
+	position: absolute;
 
 }
 .forms{
